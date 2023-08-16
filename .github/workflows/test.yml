@@ -25,7 +25,7 @@ jobs:
           echo 3333 ${{ steps.pyinst.outputs.python-path }}
           INST_DIR=$(python -c 'import mycalc;print(mycalc.__file__.rsplit("/",1)[0])')
           echo 5555 $INST_DIR
-          INST_DIR2=`pip show iPronics |grep Location|cut -d' ' -f2`
+          INST_DIR2=`pip show mycalc |grep Location|cut -d' ' -f2`
           echo 6666 $INST_DIR2
           pytest -vv --cov-config=pyproject.toml ./test --cov=mycalc --cov-report xml:coverage.xml 
       # - name: toDel
