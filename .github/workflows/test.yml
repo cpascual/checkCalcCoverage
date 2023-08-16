@@ -22,6 +22,7 @@ jobs:
         run: |
           echo $Python_ROOT_DIR
           echo ${{ steps.pyinst.outputs.python-path }}
+          echo ${{ steps.pyinst }}
           INST_DIR=$(python -c 'import mycalc;print(mycalc.__file__.rsplit("/",1)[0])')
           echo $INST_DIR
           pytest -vv --cov-config=pyproject.toml ./test --cov=mycalc --cov-report xml:coverage.xml 
