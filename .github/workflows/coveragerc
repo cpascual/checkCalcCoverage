@@ -1,0 +1,4 @@
+[paths]
+source =
+    src/
+    ${Python_ROOT_DIR?}/**/site-packages/
