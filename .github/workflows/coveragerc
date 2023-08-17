@@ -1,4 +1,4 @@
 [paths]
 source =
     src/
-    /home/carlos/mambaforge/envs/**/site-packages/
+    ${Python_ROOT_DIR?}/**/site-packages/
